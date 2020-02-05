@@ -5,10 +5,13 @@ import router from './router'
 import store from './store'
 import dateFilter from "./filters/date.filter";
 import 'materialize-css/dist/js/materialize.min'
+import Vuelidate from "vuelidate/src";
 
 Vue.config.productionTip = false;
 
-Vue.filter('date', dateFilter)
+Vue.filter('date', dateFilter);
+
+Vue.use(Vuelidate);
 
 new Vue({
   router,
